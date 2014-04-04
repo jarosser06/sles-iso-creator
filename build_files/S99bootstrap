@@ -7,9 +7,6 @@ do
   ssh-keygen -f /etc/ssh/ssh_host_${KEY}_key -N '' -t $KEY
 done
 
-echo "Upgrading system"
-zypper update --non-interactive
-
 echo "Cleaning up"
 rm /etc/rc2.d/S99bootstrap
 chmod +x /etc/rc2.d/*bootstrap

@@ -2061,24 +2061,6 @@
   </user_defaults>
   <users config:type="list">
     <user>
-      <encrypted config:type="boolean">false</encrypted>
-      <fullname>localadmin</fullname>
-      <gid>100</gid>
-      <home>/home/localadmin</home>
-      <password_settings>
-        <expire></expire>
-        <flag></flag>
-        <inact></inact>
-        <max>99999</max>
-        <min>0</min>
-        <warn>7</warn>
-      </password_settings>
-      <shell>/bin/bash</shell>
-      <uid>1000</uid>
-      <user_password>supersecurepassword</user_password>
-      <username>localadmin</username>
-    </user>
-    <user>
       <encrypted config:type="boolean">true</encrypted>
       <fullname>Games account</fullname>
       <gid>100</gid>
