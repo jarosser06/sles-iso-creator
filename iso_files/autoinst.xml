@@ -2323,7 +2323,7 @@
       <username>at</username>
     </user>
     <user>
-      <encrypted config:type="boolean">true</encrypted>
+      <encrypted config:type="boolean">false</encrypted>
       <fullname>root</fullname>
       <gid>0</gid>
       <home>/root</home>
@@ -2337,7 +2337,7 @@
       </password_settings>
       <shell>/bin/bash</shell>
       <uid>0</uid>
-      <user_password>$2y$05$NA1Li9ZKJOLRW5mMTXm6/e5r8dltWS5RpDZpvHrI82aLE00V51tdi</user_password>
+      <user_password>supersecurepassword</user_password>
       <username>root</username>
     </user>
     <user>
