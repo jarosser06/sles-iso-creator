@@ -1,6 +1,0 @@
-# Sleep to give time to view terminal
-echo "Sleeping .."
-sleep 10
-
-echo "Automate all the things .."
-/usr/bin/chef-client

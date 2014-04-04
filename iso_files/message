@@ -1,0 +1,24 @@
+
+
+                           Welcome to SUSE Linux Enterprise Server 11!
+
+
+
+0fTo start the installation enter 'linux' and press <return>.07
+
+
+Available boot options:
+
+  linux     - Installation
+  harddisk  - Boot from Harddisk (this is default)
+  noacpi    - Installation - ACPI Disabled
+  nolapic   - Installation - Local APIC Disabled
+  failsafe  - Installation - Safe Settings
+  rescue    - Rescue System
+  firmware  - Firmware Test
+  memtest   - Memory Test
+
+'noacpi', 'nolapic', or 'failsafe' may be necessary on some tricky hardware.
+
+Have a lot of fun...
+
