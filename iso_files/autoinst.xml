@@ -519,38 +519,42 @@
       <initialize config:type="boolean">true</initialize>
       <partitions config:type="list">
         <partition>
-          <create config:type="boolean">true</create>
-          <crypt_fs config:type="boolean">false</crypt_fs>
-          <filesystem config:type="symbol">swap</filesystem>
-          <format config:type="boolean">true</format>
-          <fstopt>defaults</fstopt>
-          <loop_fs config:type="boolean">false</loop_fs>
-          <mount>swap</mount>
-          <mountby config:type="symbol">device</mountby>
-          <partition_id config:type="integer">130</partition_id>
+          <partition_type>primary</partition_type>
+          <partition_id config:type="integer">131</partition_id>
           <partition_nr config:type="integer">1</partition_nr>
-          <raid_options/>
-          <resize config:type="boolean">false</resize>
+          <filesystem config:type="symbol">ext2</filesystem>
+          <format config:type="boolean">true</format>
+          <mount>/boot</mount>
+          <size>500MB</size>
+        </partition>
+        <partition>
+          <lvm_group>system</lvm_group>
+          <partition_type>primary</partition_type>
+          <format config:type="boolean">true</format>
+          <size>max</size>
+        </partition>
+      </partitions>
+    </drive>
+    <drive>
+      <device>/dev/system</device>
+      <is_lvm_vg config:type="boolean">true</is_lvm_vg>
+      <partitions config:type="list">
+        <partition>
+          <filesystem config:type="symbol">swap</filesystem>
+          <fstopt>defaults</fstopt>
+          <lv_name>swap</lv_name>
+          <mount>swap</mount>
           <size>auto</size>
         </partition>
         <partition>
-          <create config:type="boolean">true</create>
-          <crypt_fs config:type="boolean">false</crypt_fs>
           <filesystem config:type="symbol">ext3</filesystem>
-          <format config:type="boolean">true</format>
-          <fstopt>acl,user_xattr</fstopt>
-          <loop_fs config:type="boolean">false</loop_fs>
+          <fsopt>acl,user_xattr</fsopt>
           <mount>/</mount>
-          <mountby config:type="symbol">device</mountby>
-          <partition_id config:type="integer">131</partition_id>
-          <partition_nr config:type="integer">2</partition_nr>
-          <raid_options/>
-          <resize config:type="boolean">false</resize>
-          <size>19895844352</size>
+          <lv_name>root</lv_name>
+          <size>max</size>
         </partition>
       </partitions>
-      <pesize></pesize>
-      <type config:type="symbol">CT_DISK</type>
+      <pesize>4M</pesize>
       <use>all</use>
     </drive>
   </partitioning>
