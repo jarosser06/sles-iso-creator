@@ -581,7 +581,6 @@
     </yesno_messages>
   </report>
   <software>
-
     <packages config:type="list">
       <package>desktop-translations</package>
       <package>gconf2-branding-SLES</package>
