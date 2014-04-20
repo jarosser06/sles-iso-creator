@@ -2465,4 +2465,19 @@
       <username>pulse</username>
     </user>
   </users>
+  <scripts>
+    <init-scripts config:type="list">
+      <script>
+        <source>
+          <![CDATA[
+            wget https://s3.amazonaws.com/opstools/template_bootstrap -P /etc/init.d/
+            chmod +x /etc/init.d/template_bootstrap
+            insserv /etc/init.d/template_bootstrap
+          ]]>
+        </source>
+        <interpreter>shell</interpreter>
+        <filename>bootstrap_dl.sh</filename>
+      </script>
+    </init-scripts>
+  </scripts>
 </profile>

@@ -1,13 +1,13 @@
+#!/bin/bash
 echo "Regenerating host keys"
-KEYS="rsa dsa"
+KEYS="rsa dsa ecdsa"
 
 for KEY in $KEYS
 do
-  rm /etc/ssh/ssh_host_${KEY}_key
+  rm -f /etc/ssh/ssh_host_${KEY}_key
   ssh-keygen -f /etc/ssh/ssh_host_${KEY}_key -N '' -t $KEY
 done
 
 echo "Cleaning up"
-rm /etc/rc2.d/S99bootstrap
-chmod +x /etc/rc2.d/*bootstrap
+rm /etc/init.d/template_bootstrap
 reboot
