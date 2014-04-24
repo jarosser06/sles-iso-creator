@@ -1,0 +1,40 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "<up><enter><wait>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>"
+      ],
+      "boot_wait": "8s",
+      "disk_size": 20480,
+      "guest_os_type": "sles11-64",
+      "http_directory": "http",
+      "iso_checksum_type": "none",
+      "iso_url": "file:///home/jim/Projects/sles_iso_creator/SLES11-SP3-custom-x86_64-2014-04-24.iso",
+      "output_directory": "packer-sles11sp3-x86_64-vmware",
+      "shutdown_command": "shutdown -h now",
+      "ssh_password": "supersecurepassword",
+      "ssh_port": 22,
+      "ssh_username": "root",
+      "ssh_wait_timeout": "10000s",
+      "tools_upload_flavor": "linux",
+      "type": "vmware-iso",
+      "vm_name": "packer-sles11sp3-x86_64",
+      "vmx_data": {
+        "cpuid.coresPerSocket": "1",
+        "memsize": "480",
+        "numvcpus": "1"
+      }
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "ovftool",
+      "format": "ova"
+    }
+  ]
+}
+
